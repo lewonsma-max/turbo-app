@@ -219,7 +219,13 @@
       <div class="step" data-i="3"><div class="dot">✓</div><span class="label">Frekans turbo moda ayarlanıyor</span></div>
     </div>
 
-    <div class="footnote">Not: Bu uygulama eğlenceli bir görsel hızlandırma deneyimidir; tarayıcıdan işletim sisteminin donanım frekansı gerçekten değiştirilemez. Telefonunu gerçekten hızlandırmak için önbellek temizleme, güncelleme ve gereksiz uygulamaları kapatma gibi gerçek adımları da uygulaman gerekir.</div>
+    <div class="footnote">Not: Frekans göstergesi eğlenceli bir görsel animasyondur; tarayıcıdan işletim sisteminin donanım frekansı gerçekten değiştirilemez. Aşağıdaki RAM bölümü ise gerçek, sistemden okunan verilerle çalışır.</div>
+  </div>
+
+  <div class="card" id="ramCard">
+    <div style="font-weight:700; font-size:15px; margin-bottom:10px;">📊 Gerçek Bellek Durumu</div>
+    <div id="ramLine" style="font-size:14px; color:var(--sub); margin-bottom:4px;">Ölçülüyor...</div>
+    <div class="footnote" id="ramFootnote" style="margin-top:10px;">Android güvenlik nedeniyle bir uygulamanın başka uygulamaların belleğini kapatmasına izin vermez. Bu buton yalnızca bu uygulamanın kendi önbelleğini gerçekten temizler ve telefonun gerçek boş RAM miktarını gösterir.</div>
   </div>
 
   <!-- GAME TAB -->
@@ -339,6 +345,39 @@
   }
 
   gameBtn.addEventListener('click', startGame);
+
+  // --- Gerçek RAM durumu (AndroidBridge üzerinden, sadece kurulu uygulamada çalışır) ---
+  function formatMB(mb) {
+    if (mb >= 1024) return (mb / 1024).toFixed(1) + ' GB';
+    return mb + ' MB';
+  }
+
+  function refreshRealMemory() {
+    const ramLine = document.getElementById('ramLine');
+    if (typeof AndroidBridge === 'undefined') {
+      ramLine.textContent = 'Bu bilgi sadece telefona kurulu uygulamada görünür (tarayıcıda değil).';
+      return;
+    }
+    try {
+      const avail = AndroidBridge.getAvailableMemoryMB();
+      const total = AndroidBridge.getTotalMemoryMB();
+      ramLine.textContent = formatMB(avail) + ' boş / ' + formatMB(total) + ' toplam RAM';
+    } catch (e) {
+      ramLine.textContent = 'Bellek bilgisi okunamadı.';
+    }
+  }
+
+  refreshRealMemory();
+  setInterval(refreshRealMemory, 3000);
+
+  // Optimize Et butonuna basınca gerçek önbellek temizleme de tetiklensin
+  const originalOptimizeClick = btn.onclick;
+  btn.addEventListener('click', () => {
+    if (typeof AndroidBridge !== 'undefined') {
+      try { AndroidBridge.optimizeMemory(); } catch (e) {}
+      setTimeout(refreshRealMemory, 1200);
+    }
+  });
 </script>
 </body>
 </html>
