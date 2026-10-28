@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Turbo Hız Artırıcı</title>
+<meta name="description" content="Telefonunu turbo moda al, optimizasyon animasyonunu izle ve turbo refleks oyununu oyna.">
+<meta name="theme-color" content="#3b82f6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Turbo Hız">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlR1cmJvIEjEsXogQXJ0xLFyxLFjxLEiLCAic2hvcnRfbmFtZSI6ICJUdXJibyBIxLF6IiwgImRlc2NyaXB0aW9uIjogIlRlbGVmb251bnUgdHVyYm8gbW9kYSBhbCwgb3B0aW1pemFzeW9uIGFuaW1hc3lvbnVudSBpemxlIHZlIHR1cmJvIHJlZmxla3Mgb3l1bnVudSBveW5hLiIsICJzdGFydF91cmwiOiAiLiIsICJzY29wZSI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYjBlMTciLCAidGhlbWVfY29sb3IiOiAiIzNiODJmNiIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S1BHUmxabk0rUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKbklpQjRNVDBpTUNJZ2VURTlJakFpSUhneVBTSTFNVElpSUhreVBTSTFNVElpUGdvOGMzUnZjQ0J2Wm1aelpYUTlJakFpSUhOMGIzQXRZMjlzYjNJOUlpTXpZamd5WmpZaUx6NDhjM1J2Y0NCdlptWnpaWFE5SWpFaUlITjBiM0F0WTI5c2IzSTlJaU5tT1Rjek1UWWlMejRLUEM5c2FXNWxZWEpIY21Ga2FXVnVkRDQ4TDJSbFpuTStDanh5WldOMElIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWlCeWVEMGlNVEF3SWlCbWFXeHNQU0oxY213b0kyY3BJaTgrQ2p4MFpYaDBJSGc5SWpJMU5pSWdlVDBpTXpVd0lpQm1iMjUwTFhOcGVtVTlJak13TUNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNMQ0JJWld4MlpYUnBZMkVzSUhOaGJuTXRjMlZ5YVdZaUlHWnBiR3c5SW5kb2FYUmxJajRtSXprNE9EazdQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S1BHUmxabk0rUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKbklpQjRNVDBpTUNJZ2VURTlJakFpSUhneVBTSTFNVElpSUhreVBTSTFNVElpUGdvOGMzUnZjQ0J2Wm1aelpYUTlJakFpSUhOMGIzQXRZMjlzYjNJOUlpTXpZamd5WmpZaUx6NDhjM1J2Y0NCdlptWnpaWFE5SWpFaUlITjBiM0F0WTI5c2IzSTlJaU5tT1Rjek1UWWlMejRLUEM5c2FXNWxZWEpIY21Ga2FXVnVkRDQ4TDJSbFpuTStDanh5WldOMElIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWlCeWVEMGlNVEF3SWlCbWFXeHNQU0oxY213b0kyY3BJaTgrQ2p4MFpYaDBJSGc5SWpJMU5pSWdlVDBpTXpVd0lpQm1iMjUwTFhOcGVtVTlJak13TUNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNMQ0JJWld4MlpYUnBZMkVzSUhOaGJuTXRjMlZ5YVdZaUlHWnBiR3c5SW5kb2FYUmxJajRtSXprNE9EazdQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogIm1hc2thYmxlIn1dfQ==">
+<style>
+  :root {
+    --bg: #05060f;
+    --bg2: #0b0d20;
+    --card: rgba(255,255,255,0.045);
+    --card-border: rgba(255,255,255,0.09);
+    --text: #f3f5ff;
+    --sub: #9099c0;
+    --accent: #22d3ee;
+    --accent2: #e879f9;
+    --good: #34d399;
+    --border: rgba(255,255,255,0.09);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  body {
+    background:
+      radial-gradient(circle at 15% -10%, rgba(34,211,238,0.16), transparent 45%),
+      radial-gradient(circle at 100% 10%, rgba(232,121,249,0.14), transparent 40%),
+      var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  .app {
+    width: 100%;
+    max-width: 480px;
+    padding: 24px 18px 40px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 6px 0 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .sub { color: var(--sub); font-size: 13px; margin-bottom: 22px; }
+
+  .tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 5px;
+    backdrop-filter: blur(10px);
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 11px 0;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--sub);
+    cursor: pointer;
+    transition: all .25s;
+    user-select: none;
+  }
+  .tab.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #05060f;
+    box-shadow: 0 4px 18px -4px rgba(34,211,238,.45);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 22px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px -14px rgba(0,0,0,.6);
+  }
+
+  .freq-wrap { display:flex; flex-direction:column; align-items:center; padding: 6px 0 4px; }
+  .freq-ring {
+    width: 184px; height: 184px; border-radius: 50%;
+    display:flex; align-items:center; justify-content:center; flex-direction:column;
+    background: conic-gradient(var(--accent) var(--pct, 20%), rgba(255,255,255,0.06) 0);
+    position: relative;
+    transition: background 1s ease;
+    filter: drop-shadow(0 0 22px rgba(34,211,238,.35));
+  }
+  .freq-ring::after {
+    content: "";
+    position:absolute; inset: 11px;
+    background: var(--bg2);
+    border-radius: 50%;
+    border: 1px solid var(--border);
+  }
+  .freq-inner { position:relative; z-index:1; text-align:center; }
+  .freq-val {
+    font-size: 30px; font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .freq-label { font-size: 10.5px; color: var(--sub); letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; }
+  .turbo-badge {
+    margin-top: 14px;
+    font-size: 12px; font-weight: 800; letter-spacing: .05em;
+    padding: 7px 16px; border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #05060f; opacity: 0; transform: translateY(4px);
+    transition: all .35s;
+    box-shadow: 0 4px 16px -4px rgba(232,121,249,.5);
+  }
+  .turbo-badge.show { opacity: 1; transform: translateY(0); }
+
+  button.optimize {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none; border-radius: 16px;
+    font-size: 15px; font-weight: 800;
+    color: #05060f;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    cursor: pointer;
+    box-shadow: 0 10px 24px -10px rgba(34,211,238,.5);
+    transition: transform .15s;
+  }
+  button.optimize:active { transform: scale(.98); }
+  button.optimize:disabled { opacity: .55; box-shadow: none; }
+
+  .steps { margin-top: 18px; display: flex; flex-direction: column; gap: 11px; }
+  .step {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13.5px; color: var(--sub);
+  }
+  .dot {
+    width: 19px; height: 19px; border-radius: 50%;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 11px; color: transparent;
+    transition: all .3s;
+  }
+  .step.done .dot { background: var(--good); border-color: var(--good); color: #05060f; box-shadow: 0 0 10px rgba(52,211,153,.6); }
+  .step.done span.label { color: var(--text); }
+
+  .footnote { font-size: 11.5px; color: var(--sub); line-height: 1.55; margin-top: 6px; }
+
+  /* game */
+  .game-top { display:flex; justify-content: space-between; align-items:center; margin-bottom: 12px; }
+  .game-stat { font-size: 13px; color: var(--sub); }
+  .game-stat b { color: var(--accent); font-size: 15px; }
+  .arena {
+    position: relative;
+    height: 320px;
+    border-radius: 18px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(34,211,238,.06);
+  }
+  .target {
+    position: absolute;
+    width: 46px; height: 46px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--accent2), var(--accent));
+    box-shadow: 0 0 18px rgba(232,121,249,.55);
+    border: none;
+    cursor: pointer;
+  }
+  .game-btn {
+    width: 100%; margin-top: 14px; padding: 13px;
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05); color: var(--text);
+    font-weight: 700; font-size: 14px; cursor: pointer;
+  }
+  .game-over {
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap: 6px; background: rgba(5,6,15,.72); backdrop-filter: blur(4px);
+    color: white; text-align:center; padding: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>⚡ Turbo Hız Artırıcı</h1>
+  <div class="sub">Telefonunu turbo moda al, arka planı optimize et</div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="boost">⚡ Hızlandır</div>
+    <div class="tab" data-tab="game">🎮 Turbo Oyun</div>
+  </div>
+
+  <!-- BOOST TAB -->
+  <div id="boost" class="card">
+    <div class="freq-wrap">
+      <div class="freq-ring" id="ring">
+        <div class="freq-inner">
+          <div class="freq-val" id="freqVal">1.2 GHz</div>
+          <div class="freq-label">İşlemci Frekansı</div>
+        </div>
+      </div>
+      <div class="turbo-badge" id="turboBadge">🔥 TURBO MODU AKTİF</div>
+    </div>
+
+    <button class="optimize" id="optimizeBtn">Optimize Et</button>
+
+    <div class="steps" id="steps">
+      <div class="step" data-i="0"><div class="dot">✓</div><span class="label">Arka plan uygulamalar kapatılıyor</span></div>
+      <div class="step" data-i="1"><div class="dot">✓</div><span class="label">Önbellek temizleniyor</span></div>
+      <div class="step" data-i="2"><div class="dot">✓</div><span class="label">RAM optimize ediliyor</span></div>
+      <div class="step" data-i="3"><div class="dot">✓</div><span class="label">Frekans turbo moda ayarlanıyor</span></div>
+    </div>
+
+    <div class="footnote">Not: Frekans göstergesi eğlenceli bir görsel animasyondur; tarayıcıdan işletim sisteminin donanım frekansı gerçekten değiştirilemez. Aşağıdaki RAM bölümü ise gerçek, sistemden okunan verilerle çalışır.</div>
+  </div>
+
+  <div class="card" id="ramCard">
+    <div style="font-weight:700; font-size:15px; margin-bottom:10px;">📊 Gerçek Bellek Durumu</div>
+    <div id="ramLine" style="font-size:14px; color:var(--sub); margin-bottom:4px;">Ölçülüyor...</div>
+    <div class="footnote" id="ramFootnote" style="margin-top:10px;">Android güvenlik nedeniyle bir uygulamanın başka uygulamaların belleğini kapatmasına izin vermez. Bu buton yalnızca bu uygulamanın kendi önbelleğini gerçekten temizler ve telefonun gerçek boş RAM miktarını gösterir.</div>
+  </div>
+
+  <!-- GAME TAB -->
+  <div id="game" class="card" style="display:none;">
+    <div class="game-top">
+      <div class="game-stat">Skor: <b id="score">0</b></div>
+      <div class="game-stat">Süre: <b id="time">30</b>s</div>
+    </div>
+    <div class="arena" id="arena">
+      <div class="game-over" id="gameOver" style="display:none;">
+        <div style="font-size:18px;font-weight:800;">Süre Doldu!</div>
+        <div id="finalScore" style="font-size:14px;"></div>
+      </div>
+    </div>
+    <button class="game-btn" id="gameBtn">Turbo Refleks Oyununu Başlat</button>
+  </div>
+</div>
+
+<script>
+  // tabs
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('boost').style.display = t.dataset.tab === 'boost' ? 'block' : 'none';
+    document.getElementById('game').style.display = t.dataset.tab === 'game' ? 'block' : 'none';
+  }));
+
+  // boost logic
+  const ring = document.getElementById('ring');
+  const freqVal = document.getElementById('freqVal');
+  const badge = document.getElementById('turboBadge');
+  const btn = document.getElementById('optimizeBtn');
+  const stepEls = document.querySelectorAll('.step');
+
+  btn.addEventListener('click', () => {
+    btn.disabled = true;
+    btn.textContent = 'Optimize ediliyor...';
+    badge.classList.remove('show');
+    stepEls.forEach(s => s.classList.remove('done'));
+    ring.style.setProperty('--pct', '20%');
+    freqVal.textContent = '1.2 GHz';
+
+    stepEls.forEach((s, i) => {
+      setTimeout(() => {
+        s.classList.add('done');
+        const pct = 20 + (i + 1) * 20;
+        ring.style.setProperty('--pct', pct + '%');
+        const ghz = (1.2 + (i + 1) * 0.65).toFixed(1);
+        freqVal.textContent = ghz + ' GHz';
+        if (i === stepEls.length - 1) {
+          setTimeout(() => {
+            freqVal.textContent = '3.8 GHz';
+            badge.classList.add('show');
+            btn.disabled = false;
+            btn.textContent = 'Tekrar Optimize Et';
+          }, 400);
+        }
+      }, (i + 1) * 650);
+    });
+  });
+
+  // game logic
+  const arena = document.getElementById('arena');
+  const scoreEl = document.getElementById('score');
+  const timeEl = document.getElementById('time');
+  const gameBtn = document.getElementById('gameBtn');
+  const gameOver = document.getElementById('gameOver');
+  const finalScore = document.getElementById('finalScore');
+
+  let score = 0, timeLeft = 30, timerId = null, spawnId = null, running = false;
+
+  function spawnTarget() {
+    if (!running) return;
+    const old = arena.querySelector('.target');
+    if (old) old.remove();
+    const t = document.createElement('div');
+    t.className = 'target';
+    const maxX = arena.clientWidth - 46;
+    const maxY = arena.clientHeight - 46;
+    t.style.left = Math.max(0, Math.random() * maxX) + 'px';
+    t.style.top = Math.max(0, Math.random() * maxY) + 'px';
+    t.addEventListener('click', () => {
+      score++;
+      scoreEl.textContent = score;
+      t.remove();
+      spawnTarget();
+    });
+    arena.appendChild(t);
+  }
+
+  function startGame() {
+    score = 0; timeLeft = 30;
+    scoreEl.textContent = score;
+    timeEl.textContent = timeLeft;
+    gameOver.style.display = 'none';
+    running = true;
+    gameBtn.textContent = 'Oyun devam ediyor...';
+    gameBtn.disabled = true;
+    spawnTarget();
+    timerId = setInterval(() => {
+      timeLeft--;
+      timeEl.textContent = timeLeft;
+      if (timeLeft <= 0) endGame();
+    }, 1000);
+  }
+
+  function endGame() {
+    running = false;
+    clearInterval(timerId);
+    const old = arena.querySelector('.target');
+    if (old) old.remove();
+    finalScore.textContent = 'Skorun: ' + score;
+    gameOver.style.display = 'flex';
+    gameBtn.textContent = 'Tekrar Oyna';
+    gameBtn.disabled = false;
+  }
+
+  gameBtn.addEventListener('click', startGame);
+
+  // --- Gerçek RAM durumu (AndroidBridge üzerinden, sadece kurulu uygulamada çalışır) ---
+  function formatMB(mb) {
+    if (mb >= 1024) return (mb / 1024).toFixed(1) + ' GB';
+    return mb + ' MB';
+  }
+
+  function refreshRealMemory() {
+    const ramLine = document.getElementById('ramLine');
+    if (typeof AndroidBridge === 'undefined') {
+      ramLine.textContent = 'Bu bilgi sadece telefona kurulu uygulamada görünür (tarayıcıda değil).';
+      return;
+    }
+    try {
+      const avail = AndroidBridge.getAvailableMemoryMB();
+      const total = AndroidBridge.getTotalMemoryMB();
+      ramLine.textContent = formatMB(avail) + ' boş / ' + formatMB(total) + ' toplam RAM';
+    } catch (e) {
+      ramLine.textContent = 'Bellek bilgisi okunamadı.';
+    }
+  }
+
+  refreshRealMemory();
+  setInterval(refreshRealMemory, 3000);
+
+  // Optimize Et butonuna basınca gerçek önbellek temizleme de tetiklensin
+  const originalOptimizeClick = btn.onclick;
+  btn.addEventListener('click', () => {
+    if (typeof AndroidBridge !== 'undefined') {
+      try { AndroidBridge.optimizeMemory(); } catch (e) {}
+      setTimeout(refreshRealMemory, 1200);
+    }
+  });
+</script>
+</body>
+</html>
